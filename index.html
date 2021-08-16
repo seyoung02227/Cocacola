@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head">
+  <meta charset="UTF-8">
+  <title>Cocacola Landing</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section>
+    <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Taste The Feeling</h2>
+                <p>The Coca-Cola Company is a nonalcoholic beverage company in the world and one of the world's most recognizable brands. It is home to more than 500 beverage brands, some 20 of those billion-dollar-brands, including four of the top five soft drinks: Coca-Cola, Diet Coke, Fanta, and Sprite. In addition to soft drinks, it markets waters, enhanced water and sports drinks; juice drinks, dairy and plant-based beverages, ready-to-drink teas and coffees and energy drinks. Other top brands include Minute Maid, Powerade, Dasani, Honest Tea, and vitaminwater. With the world's largest beverage distribution system, Coca-Cola reaches thirsty consumers in more than 200 countries. Nearly 70% of its sales comes from outside the US.</p>
+                    <a href="https://www.coca-colacompany.com/home" target="_blank">Learn More</a>
+            </div>
+
+            <div class="imgBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="cocacola1.png"></div>
+                      <div class="swiper-slide"><img src="cocacola2.png"></div>
+                      <div class="swiper-slide"><img src="cocacola3.png"></div>
+                      <div class="swiper-slide"><img src="cocacola4.png"></div>
+                      <div class="swiper-slide"><img src="cocacola5.png"></div>
+                      <div class="swiper-slide"><img src="cocacola6.png"></div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/Coca-Cola-663709713760411/?brand_redir=40796308305" target="_blank"><img src="facebook.png" ></a></li>
+            <li><a href="https://twitter.com/CocaCola?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/cocacola/" target="_blank"><img src="instagram.png"></a></li>
+        </ul>
+</section>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      loop: true, //continue infinitely 
+    });
+
+    function toggleMenu() {
+        const menuToggle = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active")
+        navigation.classList.toggle("active")
+    }
+  </script>
+</body>
+</html>
